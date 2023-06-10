@@ -23,7 +23,7 @@ openai.api_key = os.getenv["OPENAI_API_KEY"]
            
 def main():
     init()
-
+    openai.api_key = os.getenv["OPENAI_API_KEY"]
     st.set_page_config(
         page_title="ULTIMATE ECHELON GPT"
     )
