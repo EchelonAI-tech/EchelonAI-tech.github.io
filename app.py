@@ -1,4 +1,5 @@
 import os
+import openai
 import streamlit as st
 import numpy as np
 from langchain.embeddings.openai import OpenAIEmbeddings
