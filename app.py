@@ -19,7 +19,7 @@ def init():
     # Load the OpenAI API key from the environment variable
     load_dotenv()
     
-openai.api_key = os.environ["OPENAI_API_KEY"] 
+openai.api_key = st.secrets["OPEN_API_KEY"]
            
 def main():
     init()
