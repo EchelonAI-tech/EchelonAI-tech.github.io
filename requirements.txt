@@ -1,0 +1,8 @@
+PyPDF2
+python-dotenv
+streamlit
+streamlit-extras
+streamlit_chat 
+openai
+numpy
+langchain
