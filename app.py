@@ -19,7 +19,12 @@ def init():
     # Load the OpenAI API key from the environment variable
     load_dotenv()
     
-openai.api_key = os.getenv("OPENAI_API_KEY")
+    # test that the API key exists
+    if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
+        print("OPENAI_API_KEY is not set")
+        exit(1)
+    else:
+        print("OPENAI_API_KEY is set")
            
 def main():
     init()
