@@ -15,17 +15,24 @@ from langchain.schema import (
     HumanMessage,
     AIMessage
 )
-openai.api_key = os.getenv("OPENAI_API_KEY")   
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+openai.api_key = os.getenv["OPENAI_API_KEY"]
+
+
 def init():
     # Load the OpenAI API key from the environment variable
-    load_dotenv()
-    
+    load_dotenv()   
     # test that the API key exists
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
         print("OPENAI_API_KEY is not set")
         exit(1)
     else:
         print("OPENAI_API_KEY is set")
+    
+    
+           
+def main():
+    init()
            
 def main():
     init()
